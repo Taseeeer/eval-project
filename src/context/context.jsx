@@ -7,7 +7,7 @@ export function AppProvider({ children }) {
     const [ items, setItems ] = useState([]);
     const [ total, setTotal ] = useState(0);
     const [ totalCartItems, setTotalCartItems ] = useState(0);
-
+    const [ searchFilter, setSearchFilter ] = useState('');
 
     // this function will add an item to the setItems state
     const addToCart = (id, name, price) => {
@@ -86,7 +86,8 @@ export function AppProvider({ children }) {
     };
 
 
-    return <AppContext.Provider value={{ items, totalCartItems, addToCart, removeItemFromCart, incrementItemQuantity, decrementItemQuantity, total }}>{ children }</AppContext.Provider>
+
+    return <AppContext.Provider value={{ items, searchFilter, setSearchFilter, totalCartItems, addToCart, removeItemFromCart, incrementItemQuantity, decrementItemQuantity, total }}>{ children }</AppContext.Provider>
 };
 
 export  default AppContext;

@@ -18,7 +18,7 @@ export default function Header() {
                         
                     </span>
                 </div>
-                <div className={`absolute md:static bg-gray-100 md:bg-white w-full min-h left-0 top-[${open ? '9' : '-100'}%]`}>
+                <div className={`absolute md:static bg-gray-100 md:bg-white w-full min-h left-0`} style={{ top: `${open ? '9%' : '-100%'}`, transition: '0.3s ease-in-out' }}>
                     <ul className='flex flex-col p-4 md:p-0 md:flex-row gap-8 pl-6 md:gap-0 text-[1.1rem]'>
                         <div className='flex flex-col md:flex-row md:gap-[2.5rem] md:ml-auto gap-[1.5rem]'>
                             <li className='hover:text-blue-600'><Link to='/'>Products</Link></li>
@@ -28,7 +28,7 @@ export default function Header() {
                         <li className='flex items-center gap-2 text-[1.7rem] md:ml-auto'>
                             <Link to='/cart'>
                             <span className='relative'>
-                                <p className={`absolute text-[10px] text-white py-[3px] px-[8px] left-4 bottom-4 rounded-full ${items.length === 0 ? 'bg-gray-600' : 'bg-blue-600'}`}>{totalCartItems}</p><BiCartAlt />
+                                <p className={`absolute text-[10px] text-white py-[3px] px-[8px] left-4 bottom-4 rounded-full ${totalCartItems > 0 ? 'bg-blue-600' : 'bg-gray-600'}`}>{totalCartItems}</p><BiCartAlt />
                             </span>
                             </Link>
                         </li>

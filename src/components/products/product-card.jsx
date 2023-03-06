@@ -19,7 +19,7 @@ export default function ProductCard({ id, name, price }) {
         setAddState(true)
         setTimeout(() => {
             setAddState(false)
-        }, 200);
+        }, 300);
     }
 
     return (
