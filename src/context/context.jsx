@@ -6,26 +6,45 @@ export function AppProvider({ children }) {
 
     const [ items, setItems ] = useState([]);
     const [ total, setTotal ] = useState(0);
+    const [ totalCartItems, setTotalCartItems ] = useState(0);
 
 
     // this function will add an item to the setItems state
     const addToCart = (id, name, price) => {
 
-        setItems((prevItems) => {
-            return [...prevItems, { id, name, price, quantity: 1}]
-        });
-        setTotal((prevTotal) => prevTotal + price);
+        const checkIndex = items.findIndex((item) => item.id === id);
+        if(checkIndex !== -1) {
+            items[checkIndex].quantity+1;
+            incrementItemQuantity(id);
+        } else {
+            setItems((prevItems) => {
+                return [...prevItems, { id, name, price, quantity: 1}]
+            });
+
+            setTotal((prevTotal) => prevTotal + price);
+        }
+
+        const cartItemsReducer = items.reduce((acc, curr) => {
+            acc += curr.quantity;
+            return acc;
+        }, 1);
+
+        setTotalCartItems(cartItemsReducer);
+
     }
 
     // this function will remove an item from the cart
     const removeItemFromCart = (id) => {
         const newState = items.filter((item) => item.id !== id);
-        const removedItem = items.find((item) => item.id === id);
         setItems(newState);
-        setTotal((prevTotal) => prevTotal - removedItem.price);
+
+        const removedItem = items.find((item) => item.id === id);
+        setTotal((prevTotal) => prevTotal - (removedItem.quantity * removedItem.price));
+
+        setTotalCartItems((prevState) => prevState - removedItem.quantity);
     }
 
-    // this function will increment the quantity by 1
+    // this function will increment the quantity by 1 and add its price to the total price
     const incrementItemQuantity = (id) => {
         const incrementedQuantityState = items.map((item) => {
             if(item.id === id) {
@@ -38,9 +57,10 @@ export function AppProvider({ children }) {
 
         setItems(incrementedQuantityState);
         setTotal((prevTotal) => prevTotal + incrementedItem.price);
+        setTotalCartItems((prevState) => prevState + 1);
     };
 
-    // this function will decrement the quantity by 1
+    // this function will decrement the quantity by 1 and deduct its price from the total price
     const decrementItemQuantity = (id) => {
         const decrementedQuantityState = items.map((item) => {
             if(item.id === id) {
@@ -53,16 +73,20 @@ export function AppProvider({ children }) {
         const decrementedItem = items.find((item) => item.id === id);
 
         setItems(decrementedQuantityState);
-        setTotal((prevTotal) => {
-            if(prevTotal === 0) {
-                return 0;
-            } 
-            return prevTotal - decrementedItem.price
-        });
+
+        if(decrementedItem.quantity > 0) {
+            setTotal((prevTotal) => {
+                if(prevTotal === 0) {
+                    return 0;
+                } 
+                return prevTotal - decrementedItem.price
+            });
+        }
+        setTotalCartItems((prevState) => prevState - 1);
     };
 
 
-    return <AppContext.Provider value={{ items, addToCart, removeItemFromCart, incrementItemQuantity, decrementItemQuantity, total }}>{ children }</AppContext.Provider>
+    return <AppContext.Provider value={{ items, totalCartItems, addToCart, removeItemFromCart, incrementItemQuantity, decrementItemQuantity, total }}>{ children }</AppContext.Provider>
 };
 
 export  default AppContext;
