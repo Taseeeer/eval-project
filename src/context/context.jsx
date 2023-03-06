@@ -82,7 +82,10 @@ export function AppProvider({ children }) {
                 return prevTotal - decrementedItem.price
             });
         }
-        setTotalCartItems((prevState) => prevState - 1);
+        
+        if(decrementedItem.quantity > 0) {
+            setTotalCartItems((prevState) => prevState - 1);
+        }
     };
 
 

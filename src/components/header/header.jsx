@@ -13,7 +13,7 @@ export default function Header() {
             <nav className='flex items-center justify-between'>
                 <div className='flex items-center justify-between w-full md:w-max'>
                     <Link to='/' className='uppercase text-[1.2rem] font-bold text-blue-600'>Logo</Link>
-                    <span className='md:hidden text-[1.7rem]' onClick={() => setOpen(!open)}>
+                    <span className='md:hidden text-[1.7rem] cursor-pointer' onClick={() => setOpen(!open)}>
                         { open ? <BiX /> : <BiMenu /> }
                         
                     </span>

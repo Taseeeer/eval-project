@@ -1,10 +1,10 @@
-
+// this is some dummy data generated using chatgpt
 export const data = [
     {
       "id": 1,
       "name": "Wireless Headphones",
       "price": 100,
-      "rating": 4
+      "rating": 5
     },
     {
       "id": 2,
@@ -16,19 +16,19 @@ export const data = [
       "id": 3,
       "name": "Gaming Keyboard",
       "price": 99.99,
-      "rating": 4
+      "rating": 3
     },
     {
       "id": 4,
       "name": "Bluetooth Speaker",
       "price": 79.99,
-      "rating": 4
+      "rating": 2
     },
     {
       "id": 5,
       "name": "Fitness Tracker",
       "price": 90,
-      "rating": 4
+      "rating": 5
     },
     {
       "id": 6,
@@ -46,7 +46,7 @@ export const data = [
       "id": 8,
       "name": "Tablet",
       "price": 399.99,
-      "rating": 2
+      "rating": 1
     },
     {
       "id": 9,
@@ -64,7 +64,7 @@ export const data = [
       "id": 11,
       "name": "Wireless Earbuds",
       "price": 119.99,
-      "rating": 4.4
+      "rating": 5
     },
     {
       "id": 12,

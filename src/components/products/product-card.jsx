@@ -2,13 +2,15 @@ import mKeyboard from '../../assets/img-1.jpg'
 import { AiFillStar, AiOutlineCheck } from 'react-icons/ai';
 import { useContext, useState } from 'react';
 import AppContext from '../../context/context';
+import ProductStars from './product-stars';
 
-export default function ProductCard({ id, name, price }) {
+export default function ProductCard({ id, name, price, rating }) {
 
     const { items, addToCart } = useContext(AppContext);
     const [ addedState, setAddState ] = useState(false);
 
     const randomNumber = Math.floor(Math.random() * 500);
+
     // if you want to generate random image for each product card, you can make use of the link given below,
     // just put it in the src of the img tag.
     // `https://picsum.photos/${randomNumber}/300.jpg`
@@ -28,14 +30,9 @@ export default function ProductCard({ id, name, price }) {
                 <img src={mKeyboard} alt='playstation 5' className='rounded w-full max-h-52 bg-auto' />
                 <div>
                     <p className='text-[1.1rem] pt-4'>{name}</p>
-                    <div className='flex pt-2 items-center text-[1.4rem] text-yellow-400 cursor-pointer'>
-                        <AiFillStar />
-                        <AiFillStar />
-                        <AiFillStar />
-                        <AiFillStar />
-                        <AiFillStar />
-                        <p className='text-[0.8rem] ml-2 text-white bg-blue-600 py-0 px-1 rounded'>5.0</p>
-                    </div>
+
+                    {/* I did not wanted to integrated 3rd party for stars rating, so I wrote my own little component to handle that. */}
+                    <ProductStars rating={rating} />
 
                     <p className='text-[1.5rem] py-2 font-medium'>${price}</p>
                     <button className={`w-full text-white bg-blue-600 py-2 px-4 rounded hover:bg-blue-500`}
