@@ -1,0 +1,38 @@
+How to run this application locally:
+1. Clone this git repository on your machine.
+2. Move to the directory of the folder and install all the dependencies via terminal by running the command called "npm install".
+3. Once the dependencies are installed successfully, you can run the application by running the command called "npm run dev".
+4. Your application will be running locally on http://localhost:5173. Since I have used Vite, it serves the application on PORT:5173 by default.
+
+How the application works:
+1. Once your application starts running on localhost, you will land directly on the products page.
+2. This application has only two page, one is the products page and the other is the cart page, since more than that were not listed in the assessment.
+3. OurStory and Customer are dummy links and does nothing, and are only there to make navigation bar realistic but clicking on LOGO and Products 
+will route you to the root page where all the products are listed and clicking on the cart icon will route you to the cart page.
+4. The products page shows a list of all the products available along with its name, price and rating.
+5. You can add any item to the cart by clicking "Add to cart" button, and it will add it to your cart. 
+6. Once you add an item, you can see it by looking at your cart icon on the top right corner which will show the amount of products you've added to your cart.
+7. You can visit the cart page by clicking the cart icon on the top right corner.
+8. The cart page will show all the items you've added in your cart, its price, quantity and the subtotal price of all the items in your cart.
+9. You can increase the quantity of your item inside your cart by clicking the plus icon, the quantity will increase and it will add its price to the subtotal.
+10. You can decrease the quantity of your item inside your cart by clicking the minus icon, the quantity will decrease and it will deduct its price from the subtotal.
+
+
+My Approach:
+1. First of all, I had to choose a build tool for the application, for which I chose Vite.
+2. Next, I had to decide which styling tool should I move with and listed a few, and then decided to move with TailwindCSS.
+3. For routing I am using react-router v6.
+4. To handle state management, I first looked at the requirements of the project and then I decided to manage it with the ContextAPI provided by react, I chose ContextAPI because the cart state management can be easy done via ContextAPI. For more state intensive applications we can choose Redux or Zustand.
+
+Challenges:
+Proper state management was by far the challenging in this application without using ContextAPI, but I solved it by handling the state management with ContextAPI.
+Also making the application responsive to all work on mobile devices.
+The application is now completely responsive.
+
+Improvements:
+1. This application was not that much state intensive but if there were more state to be managed, I would have used Redux, Redux-Toolkit or Zustand.
+2. There is no data fetching since the data is static/dummy data but if I had to do data fetching, I would have used React-Query, which 
+provides out of the box state management for data fetching and caching it.
+3. Can we implement Code Splitting on improve the performance of the application.
+4. We can make improvements in the design, but I tried my best to make it look attractive and minimal at the same time.
+5. We can write basic test cases with Jest to check the demeanour of the application. 
