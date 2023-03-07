@@ -1,12 +1,10 @@
-import Header from "../components/header/header";
-import AllProducts from "../components/products/all-products";
-import Cart from "./Cart";
+import AllProducts from '../components/products/all-products';
+import Layout from '../components/layout/layout';
 
 export default function Products() {
     return (
-        <div>
-            <Header />
+        <Layout>
             <AllProducts />
-        </div>
+        </Layout>
     )
 }

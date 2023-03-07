@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export default function CartItems() {
 
 
-    const { items, total, removeItemFromCart, incrementItemQuantity, decrementItemQuantity } = useContext(AppContext);
+    const { items, total } = useContext(AppContext);
 
     const roundeMyPrice = (price) => {
         return Math.round(price*100)/100;

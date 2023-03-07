@@ -1,5 +1,5 @@
 import mKeyboard from '../../assets/img-1.jpg'
-import { AiFillStar, AiOutlineCheck } from 'react-icons/ai';
+import { AiOutlineCheck } from 'react-icons/ai';
 import { useContext, useState } from 'react';
 import AppContext from '../../context/context';
 import ProductStars from './product-stars';

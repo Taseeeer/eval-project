@@ -33,6 +33,6 @@ Improvements:
 1. This application was not that much state intensive but if there were more state to be managed, I would have used Redux, Redux-Toolkit or Zustand.
 2. There is no data fetching since the data is static/dummy data but if I had to do data fetching, I would have used React-Query, which 
 provides out of the box state management for data fetching and caching it.
-3. Can we implement Code Splitting on improve the performance of the application.
-4. We can make improvements in the design, but I tried my best to make it look attractive and minimal at the same time.
+3. We can implement Code Splitting to improve the performance of the application.
+4. We can make improvements in the design, but I tried my best to make it look attractive and minimal at the same time for optimal user experience.
 5. We can write basic test cases with Jest to check the demeanour of the application. 

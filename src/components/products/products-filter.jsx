@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import AppContext from "../../context/context";
+import { useContext } from 'react';
+import AppContext from '../../context/context';
 import { BiSearch } from 'react-icons/bi';
 
 export default function ProductFilter() {
