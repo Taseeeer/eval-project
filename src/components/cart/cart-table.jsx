@@ -32,9 +32,9 @@ export default function CartTable({ items }) {
                         </td>
                         <td className=''>
                             <div className='text-center flex items-center gap-1'>
-                                <BiPlusCircle className='text-[1.2rem] cursor-pointer' onClick={() => incrementItemQuantity(item.id)}/>
-                                {item.quantity}
                                 <BiMinusCircle className='text-[1.2rem] cursor-pointer' onClick={() => decrementItemQuantity(item.id)} />
+                                {item.quantity}
+                                <BiPlusCircle className='text-[1.2rem] cursor-pointer' onClick={() => incrementItemQuantity(item.id)}/>
                             </div>
                         </td>
                         <td className='text-red-400 cursor-pointer text-[1.2rem]'>{<BiTrash onClick={() => removeItemFromCart(item.id)} />}</td>

@@ -3,7 +3,6 @@ import Cart from './pages/Cart'
 import Products from './pages/Products'
 
 function App() {
-
   const AppRoutes = () => {
     const routes = useRoutes([
       {
