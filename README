@@ -10,12 +10,13 @@ How the application works:
 3. OurStory and Customer are dummy links and does nothing, and are only there to make navigation bar realistic but clicking on LOGO and Products 
 will route you to the root page where all the products are listed and clicking on the cart icon will route you to the cart page.
 4. The products page shows a list of all the products available along with its name, price and rating.
-5. You can add any item to the cart by clicking "Add to cart" button, and it will add it to your cart. 
+5. You can add any item to the cart by clicking "Add to cart" button, and it will add it to your cart.
 6. Once you add an item, you can see it by looking at your cart icon on the top right corner which will show the amount of products you've added to your cart.
 7. You can visit the cart page by clicking the cart icon on the top right corner.
 8. The cart page will show all the items you've added in your cart, its price, quantity and the subtotal price of all the items in your cart.
 9. You can increase the quantity of your item inside your cart by clicking the plus icon, the quantity will increase and it will add its price to the subtotal.
 10. You can decrease the quantity of your item inside your cart by clicking the minus icon, the quantity will decrease and it will deduct its price from the subtotal.
+11. You can search for items by typing the name of the item in the search bar of the products page.
 
 
 My Approach:
