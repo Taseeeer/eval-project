@@ -10,7 +10,7 @@ export default function CartTable({ items }) {
     return (
         <table className='w-full'>
             <thead className=''>
-                <tr className='[&>*]:uppercase py-4 text-gray-500 border-b-2'>
+                <tr className='[&>*]:uppercase text-[10px] md:text-[0.9rem] py-4 text-gray-500 border-b-2'>
                     <th className='text-start py-2'>Products</th>
                     <th className='text-start'>Quantity</th>
                     <th className='text-start'>Remove</th>

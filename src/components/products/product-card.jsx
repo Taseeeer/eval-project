@@ -31,7 +31,7 @@ export default function ProductCard({ id, name, price, rating }) {
                 <div>
                     <p className='text-[1.1rem] pt-4'>{name}</p>
 
-                    {/* I did not wanted to integrated 3rd party for stars rating, so I wrote my own little component to handle that. */}
+                    {/* I did not want to integrated any 3rd party library for stars rating, so I wrote my own little component to handle that. */}
                     <ProductStars rating={rating} />
 
                     <p className='text-[1.5rem] py-2 font-medium'>${price}</p>

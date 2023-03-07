@@ -23,7 +23,7 @@ export default function CartItems() {
 
     return (
         <div className='p-6 text-gray-500'>
-            <p className='text-[1.5rem] text-blue-600 font-medium'>Your cart</p>
+            <p className='text-[1.5rem] font-medium'>My cart</p>
 
             <div>
                 <CartTable items={items} />
