@@ -32,8 +32,11 @@ The application is now completely responsive.
 
 Improvements:
 1. This application was not that much state intensive but if there were more state to be managed, I would have used Redux, Redux-Toolkit or Zustand.
-2. There is no data fetching since the data is static/dummy data but if I had to do data fetching, I would have used React-Query, which 
-provides out of the box state management for data fetching and caching it.
-3. We can implement Code Splitting to improve the performance of the application.
-4. We can make improvements in the design, but I tried my best to make it look attractive and minimal at the same time for optimal user experience.
-5. We can write basic test cases with Jest to check the demeanour of the application but that was optional. 
+2. There is no data fetching since the data is static/dummy data but if I had to do data fetching, I would have used React-Query, which provides out of the box state management for data fetching and caching it.
+3. Since you can search a product by its name, we are not making an API call here because the data is present but in real application we have to make an API call for searching the product, for that I would must use debouching to limit the API calls for searching the product.
+4. Components that are not changing frequently can be memoized.
+5. We can implement Code Splitting to improve the performance of the application.
+6. We can make improvements in the design, but I tried my best to make it look attractive and minimal at the same time for optimal user experience.
+7. We can write basic test cases with Jest to check the demeanour of the application but that was optional. 
+
+In conclusion, many things can be done to make the user experience better and more optimal. Applications must be optimised with time when it grows and never beforehand according to best practices.
