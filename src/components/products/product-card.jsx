@@ -7,7 +7,7 @@ import ProductStars from './product-stars';
 export default function ProductCard({ id, name, price, rating }) {
 
     const { items, addToCart } = useContext(AppContext);
-    const [ addedState, setAddState ] = useState(false);
+    const [ addState, setAddState ] = useState(false);
 
     const randomNumber = Math.floor(Math.random() * 500);
 
@@ -36,7 +36,7 @@ export default function ProductCard({ id, name, price, rating }) {
 
                     <p className='text-[1.5rem] py-2 font-medium'>${price}</p>
                     <button className={`w-full text-white bg-blue-600 py-2 px-4 rounded hover:bg-blue-500`}
-                    onClick={() => handleAddToCart(id, name, price )}>{addedState ? <div className='py-[4px] flex items-center justify-center'><AiOutlineCheck /></div> : 'Add to cart'}</button>
+                    onClick={() => handleAddToCart(id, name, price )}>{addState ? <div className='py-[4px] flex items-center justify-center'><AiOutlineCheck /></div> : 'Add to cart'}</button>
                 </div>
             </div>
         </div>
