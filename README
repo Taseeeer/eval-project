@@ -26,17 +26,9 @@ My Approach:
 4. To handle state management, I first looked at the requirements of the project and then I decided to manage it with the ContextAPI provided by react, I chose ContextAPI because the cart state management can be easily done via ContextAPI. For more state intensive applications I would have configured Redux or Zustand but it will be an overkill for a project like this.
 
 Challenges:
-Proper state management was by far the challenging in this application without using ContextAPI, but I solved it by handling the state management with ContextAPI.
-Also making the application responsive to all work on mobile devices.
+Proper state management was by far the challenging in this application without using ContextAPI, but I solved it by handling the state management with ContextAPI. Also making the application responsive to all work on mobile devices.
 The application is now completely responsive.
 
 Improvements:
 1. This application was not that much state intensive but if there were more state to be managed, I would have used Redux, Redux-Toolkit or Zustand.
 2. There is no data fetching since the data is static/dummy data but if I had to do data fetching, I would have used React-Query, which provides out of the box state management for data fetching and caching it.
-3. Since you can search a product by its name, we are not making an API call here because the data is present but in real application we have to make an API call for searching the product, for that I would must use debouching to limit the API calls for searching the product.
-4. Components that are not changing frequently can be memoized.
-5. We can implement Code Splitting to improve the performance of the application.
-6. We can make improvements in the design, but I tried my best to make it look attractive and minimal at the same time for optimal user experience.
-7. We can write basic test cases with Jest to check the demeanour of the application but that was optional. 
-
-In conclusion, many things can be done to make the user experience better and more optimal. Applications must be optimised with time when it grows and never beforehand according to best practices.
